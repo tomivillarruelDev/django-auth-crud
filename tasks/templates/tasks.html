@@ -4,7 +4,9 @@
 <main class="container">
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <h1 class="text-center display3 py-5">Tasks Pending</h1>
+            {% if 'tasks_completed' not in request.path %}
+             <h1 class="text-center display3 py-5">Tasks Pending</h1>
+            {% endif %}>Tasks Pending</h1>
 
             <ul class="list-group">
                 {% for task in tasks %}
