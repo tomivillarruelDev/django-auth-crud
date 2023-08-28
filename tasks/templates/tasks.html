@@ -6,7 +6,9 @@
         <div class="col-md-6 offset-md-3">
             {% if 'tasks_completed' not in request.path %}
              <h1 class="text-center display3 py-5">Tasks Pending</h1>
-            {% endif %}>Tasks Pending</h1>
+            {% else %}
+            <h1 class="text-center display3 py-5">Tasks Completed</h1>
+            {% endif %}
 
             <ul class="list-group">
                 {% for task in tasks %}
